@@ -1,0 +1,37 @@
+Projenin amacı: Kullanıcıların çeşitli kriterlere göre ürünleri filtreleyip görüntüleyebileceği bir arayüz oluşturmak.
+
+1. Proje Yapısının Oluşturulması
+HTML: Gerekli elementlerin ve yapıların oluşturulması.
+Başlık, açıklamalar, filtre soruları ve seçenekleri, ürünlerin gösterileceği alan, "Next" ve "Back" butonları.
+CSS: Tasarım ve stil ayarlarının yapılması.
+Responsive tasarım, ürün ve butonların stilizasyonu.
+
+2. JSON Dosyalarının Hazırlanması ve Entegrasyonu
+questions.json: Filtreleme soruları ve seçeneklerin bulunduğu dosya.
+products.json: Ürün bilgileri (isim, kategori, fiyat, renkler, resim URL'leri).
+
+3. JavaScript Fonksiyonlarının Yazılması
+
+JSON Verilerinin Alınması:
+fetch ile questions.json ve products.json dosyalarını çek.
+
+Arayüz Güncellemeleri:
+İlk olarak kategori seçim adımını yükle.
+Kullanıcının seçimine göre sonraki adımları dinamik olarak yükle.
+
+Seçimlerin Yönetimi:
+Her adımda kullanıcıdan seçim al.
+Seçim yapılmadan "Next" butonunun çalışmaması için kontrol ekle.
+
+Adım Sayacının Yönetimi:
+"Next" ve "Back" butonları ile adımları ileri ve geri al.
+
+Adım sayacını doğru şekilde güncelle.
+
+Ürünlerin Filtrelenmesi ve Gösterilmesi:
+Kullanıcının yaptığı seçimlere göre ürünleri filtrele ve göster.
+Filtreye uyan ürün yoksa "No Product Found" mesajı göster.
+
+Ürünleri slayt şeklinde göster (slider kütüphanesi kullanılabilir).
+
+Lazy Loading: Ürün resimlerini lazy-load ile yükle.

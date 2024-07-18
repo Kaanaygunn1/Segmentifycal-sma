@@ -1,0 +1,274 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  /* Tüm kenar boşluklarını sıfırla */
+  background-color: #f0f0f0;
+}
+
+
+.box {
+  width: 60vw;
+  /* Ekran genişliğinin %90'ı */
+  height: auto;
+  /* İçeriğe göre otomatik yükseklik */
+  max-width: 400px;
+  /* Maksimum genişlik 400px */
+  max-height: 600px;
+  /* Maksimum yükseklik 600px */
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 2%;
+  /* İçerik kenar boşluğu */
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  color: black;
+  text-align: center;
+}
+
+.step {
+  color: black;
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#items {
+  border: solid black 2px;
+  height: 300px;
+  width: 100%;
+}
+
+input[type="radio"]:checked+label {
+  color: rgb(0, 0, 0);
+  border: none;
+  background-color: rgb(216, 221, 205);
+  outline: 2px solid white;
+  box-shadow: 0 0 0 4px black;
+}
+
+#category {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radiostep1+label {
+  justify-content: center;
+  align-items: center;
+  display: block;
+  width: 80%;
+  margin-top: 10%;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+  margin-inline-start: 10%;
+  margin-inline-end: 10%;
+  margin-block-start: 10%;
+}
+
+.radiostep1+label:hover {
+  outline: 2px solid black;
+  /* Düzeltme: outline rengi belirtilmeli */
+}
+
+#color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin: auto;
+}
+
+.radiostep2+label {
+  display: flex;
+  justify-content: space-around;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ccc;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: auto 10px;
+}
+
+.radiostep2+label:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#price {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+#price .radiostep3+label {
+  width: 80px;
+  margin: 10px;
+  margin-inline-start: 20px;
+  padding: 3%;
+  border: 1px solid #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+#price .radiostep3+label:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  margin-top: 10%;
+  font-size: large;
+  color: black;
+  font-weight: bold;
+}
+
+.subtitle {
+  margin-top: 10%;
+  font-size: large;
+  color: black;
+  font-weight: normal;
+}
+
+#button {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.next-button,
+.back-button {
+  width: 50px;
+  height: 50px;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  font-size: 80%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.next-button:hover,
+.back-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(255, 0, 0);
+}
+
+.next-button {
+  margin-right: 10px;
+}
+
+.back-button {
+  margin-left: 10px;
+}
+
+
+.swiper-button-prev {
+
+  margin-left: -12px;
+}
+
+.swiper-button-next {
+  margin-right: -12px;
+}
+
+
+.swiper-pagination-bullet {
+  background-color: black;
+}
+
+.swiper {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  display: contents;
+  justify-content: space-between;
+  position: relative;
+
+}
+
+.swiper-slide img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+
+}
+
+#loading {
+  background-color: black;
+  padding: 3%;
+  color: white;
+  font-size: 20px;
+  margin: auto;
+  border-radius: 25%;
+  text-align: center;
+  align-items: center;
+}
+
+.go-to-product-button {
+  background-color: black;
+  color: aliceblue;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.step-indicator-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.step-indicator {
+  width: 50px;
+  height: 2px;
+  border-radius: 50%;
+  margin-top: 15px;
+  background-color: #ddd;
+  transition: background-color 0.3s;
+}
+
+.step-indicator.active {
+  background-color: black;
+}
+
+.swiper-btn-disabled {
+  display: none!important;
+}
